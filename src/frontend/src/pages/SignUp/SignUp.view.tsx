@@ -30,10 +30,11 @@ export const SignUpView = ({ signUpCallback, loading }: SignUpViewProps) => {
   }
 
   useEffect(() => {
-    const url = window.location.href
+    const urlSearchParams = new URLSearchParams(window.location.search)
+    const params = Object.fromEntries(urlSearchParams.entries())
 
-    if (url.includes('?referral=')) {
-      setReferalLink(url)
+    if (params?.referral) {
+      setReferalLink(params.referral)
     }
   }, [])
 
