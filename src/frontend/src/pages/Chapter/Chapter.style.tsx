@@ -424,6 +424,7 @@ export const narrativeText = styled.div`
   font-size: 18px;
   color: #f2f2f2;
   overflow: hidden;
+  padding: 15px;
 
   img {
     display: none;
